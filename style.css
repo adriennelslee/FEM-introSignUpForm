@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: hsl(0, 100%, 74%);
+    background-image: url("./images/bg-intro-desktop.png");
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.container{
+    display: flex;
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    min-width: 75%;
+    max-height: 80%;
+    transform: translate(-50%, 15%);
+}
+
+.containerLeft{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    justify-content: center;
+    margin-right: 5%;
+}
+
+h1{
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.containerLeft p{
+    font-size: 0.9rem;
+}
+
+.containerRight{
+    flex-basis: 50%;
+}
+
+.promo{
+    background-color: hsl(248, 32%, 49%);
+    color: hsl(246, 25%, 77%);
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 1rem /* 0 */;
+    margin-bottom: 1rem;
+}
+
+.promo .bolder {
+    font-weight: 600;
+}
+
+.form{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+input{
+    color: hsl(249, 10%, 26%);
+    box-sizing: border-box;
+    height: 3rem;
+    width: 100%;
+    padding-left: 1rem;
+    font-weight: 700;
+}
+
+.formComponent{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.formComponent img{
+    position: absolute;
+    opacity: 0;
+    width: 1.3rem;
+    top: 0.7rem;
+    right: 1.3rem;
+}
+
+.formComponent span{
+    display: inline-block;
+    color: hsl(0, 100%, 74%);
+    font-size: 0.6rem;
+    font-style: italic;
+    font-weight: 400;
+    margin: 0.3rem /* 0 */;
+}
+
+button{
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 700;
+    height: 2.5rem;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 0.7rem;
+    /* border-radius needed */
+}
+
+.formElem{
+    border: 1px solid grey;
+    border-radius: 0.3rem;
+}
+
+.tAndS{
+    display: flex;
+    justify-content: center;
+    color: hsl(246, 25%, 77%);
+    font-size: 0.6rem;
+    font-weight: 600;
+}
+
+.tAndS p{
+    font-size: 0.6rem;
+    margin-right: 0.2rem;
+}
+
+a{
+    display: inline;
+    color: hsl(0, 100%, 74%);
+    text-decoration: none;
+}
+
+.error img{
+    opacity: 1;
+}
+
+.error input{
+    border: 2px solid hsl(0, 100%, 74%);
+}
+
+.attribution{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+}
+
+
+@media only screen and (max-width: 768px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        position: static;
+        left: 50%;
+        top: 0;
+        margin: 10% 10%;
+        transform: translate(0, 0);
+        min-width: 75%;
+        max-height: 80%;
+    }
+    .containerLeft{
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    h1{
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+    }
+    .promo{
+        padding: 1rem 4rem;
+    }
+    .tAndS{
+        flex-direction: column;
+        align-items: center;
+    }
+    .tAndS p{
+        margin-bottom: .3rem;
+    }
+    .attribution{
+        display: none;
+    }
+}
